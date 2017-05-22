@@ -16,5 +16,5 @@ export default [{
 	component:Column
 },{
 	path:'/article/:id',
-	component:Article
+    component:Article
 }]

@@ -44,6 +44,6 @@
 		}
 	}
 </script>
-<style>
+<style scoped>
 	@import '../assets/css/index.css'
 </style>
