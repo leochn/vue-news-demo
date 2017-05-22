@@ -4,7 +4,7 @@
 			<!-- <route-link to='/home' tag='li' active-class='active'>
 				<a href="javascript:;">首页</a>
 			</route-link> -->
-			首页
+			Nav-----
 		</ul>
 	</div>
 </template>
