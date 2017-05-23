@@ -4,7 +4,10 @@ import VueRouter from 'vue-router'
 import axios from 'axios'
 
 import routes from './routeConfig.js'
+import stores from './vuex/store'
 
+import filters from './filters'
+Object.keys(filters).forEach(key => Vue.filter(key, filters[key]))
 
 Vue.use(VueRouter);
 
@@ -13,7 +16,7 @@ require('./assets/css/base.css'); //引入全局的base文件
 
 const router=new VueRouter({
 	mode: 'history', //切换路径模式，变成history模式
-  scrollBehavior: () => ({ y: 0 }), // 滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
+	scrollBehavior: () => ({ y: 0 }), // 滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
 	routes
 });
 
@@ -39,5 +42,6 @@ Vue.prototype.$http = axios; //其他页面在使用axios的时候直接  this.$
 new Vue({
   el: '#app',
   router,
+  store:stores,
   render: h => h(App)
 })

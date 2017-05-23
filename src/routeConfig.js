@@ -17,4 +17,10 @@ export default [{
 },{
 	path:'/article/:id',
     component:Article
+},{
+	path:'/',
+	redirect:'/home'
+},{
+	path:'*',
+	redirect:'/home'
 }]
